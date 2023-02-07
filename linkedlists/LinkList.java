@@ -235,8 +235,7 @@ public class LinkList {
         }
     }
 
-    //palindrome link list using stack approach
-
+    //q5.palindrome link list using stack approach
     public boolean isPalindrome(){
         ArrayList<Integer> list = new ArrayList<>();
         Node temp = head;
@@ -264,6 +263,37 @@ public class LinkList {
         }
         return true;
     }
+
+    //q6.recursive printing
+    public void recursivePrint(){
+        recPrintHelper(head);
+    }
+    private void recPrintHelper(Node node){
+        if(node.next == null){
+            System.out.print(node.value + " -> ");
+            return;
+        }
+        recPrintHelper(node.next);
+        System.out.print(node.value + " -> ");
+    }
+
+    //q7. recursive reversal -handling with tail
+    private void recRevHelper(Node node){
+        if(node == tail){
+            head = tail;
+            return;
+        }
+        recRevHelper(node.next);
+        tail.next = node;
+        tail = node;
+        node.next = null;
+    }
+
+    public void recRev(){
+        recRevHelper(head);
+    }
+
+
 
     private class Node{
         private int value;
