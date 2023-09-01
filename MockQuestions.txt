@@ -1,0 +1,7 @@
+1. Train Arrival And Departures in an array - find out the min platforms required - sorting
+2. Find the first positive number that has exactly 4 factors and all the factors a difference d among them 
+3. A>B, B>C, C>B meaning a comes first to b, etc - find out the no of possiblities
+4. Count the no of subarrays so that the consecutive elements' diff is constant in every subset 
+5. Count the no of subsets with a sum divisible by 7 - states are Dp(level, sum % 7) - so that in base case 
+only sum % 7 == 0 returns 1
+6.Level Order Successor of a Node - do level order, see node removed from the q is matched, break out of the loop, return next node in the q. stop the loop only after adding it's children so that null to the left is handled	                                     
